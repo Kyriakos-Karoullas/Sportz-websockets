@@ -15,7 +15,7 @@ export const matchIdParamSchema = z.object({
 });
 
 // ISO 8601 datetime string like: 2026-02-01T12:00:00.000Z
-const isoDateString = z.string().datetime({ message: "Invalid ISO date string" });
+const isoDateString = z.iso.datetime();
 
 export const createMatchSchema = z
   .object({
